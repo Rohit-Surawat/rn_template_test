@@ -1,0 +1,8 @@
+{
+  "name": "rn_template_test",
+  "version": "0.0.5",
+  "description": "React Native Template",
+  "repository": "https://github.com/Rohit-Surawat/rn_template_test.git",
+  "author": "Rohit Surawat <rajrohitsu01@gmail.com>",
+  "license": "MIT"
+}
