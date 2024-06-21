@@ -1,9 +1,12 @@
 package com.projectfortemplate
 
+import android.os.Bundle
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate
 import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint.fabricEnabled
 import com.facebook.react.defaults.DefaultReactActivityDelegate
+import com.projectfortemplate.sslpinning.SSLPinnerAsyncTask
+
 
 class MainActivity : ReactActivity() {
 
@@ -12,6 +15,18 @@ class MainActivity : ReactActivity() {
    * rendering of the component.
    */
   override fun getMainComponentName(): String = "ProjectForTemplate"
+
+
+  override fun onCreate(savedInstanceState: Bundle?) {
+
+    super.onCreate(savedInstanceState)
+    try {
+      SSLPinnerAsyncTask().execute()
+    } catch (e: Exception) {
+    }
+
+  }
+
 
   /**
    * Returns the instance of the [ReactActivityDelegate]. We use [DefaultReactActivityDelegate]

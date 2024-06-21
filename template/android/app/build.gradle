@@ -1,7 +1,13 @@
 apply plugin: "com.android.application"
 apply plugin: "org.jetbrains.kotlin.android"
 apply plugin: "com.facebook.react"
-
+project.ext.envConfigFiles = [
+        dev: ".env.dev",
+        uat :".env.uat",
+        prod:'.env.prod'
+]
+apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
+apply plugin: 'com.google.firebase.crashlytics'
 /**
  * This is the configuration block to customize your React Native Android app.
  * By default you don't need to apply any configuration, just uncomment the lines you need.
@@ -100,6 +106,29 @@ android {
             signingConfig signingConfigs.debug
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+            firebaseCrashlytics {
+                nativeSymbolUploadEnabled true
+                unstrippedNativeLibsDir 'build/intermediates/merged_native_libs/release/out/lib'
+            }
+        }
+    }
+
+    flavorDimensions =['env']
+    productFlavors {
+        dev {
+            dimension 'env'
+            applicationIdSuffix ".dev"
+            resValue "string", "build_config_package","com.projectfortemplate"
+        }
+        uat {
+            dimension 'env'
+            applicationIdSuffix ".uat"
+            resValue "string", "build_config_package","com.projectfortemplate"
+        }
+        prod {
+            dimension 'env'
+            applicationIdSuffix ""
+            resValue "string", "build_config_package","com.projectfortemplate"
         }
     }
 }
@@ -107,7 +136,13 @@ android {
 dependencies {
     // The version of react-native is set by the React Native Gradle Plugin
     implementation("com.facebook.react:react-android")
-
+    debugImplementation("com.facebook.flipper:flipper:${FLIPPER_VERSION}")
+    debugImplementation("com.facebook.flipper:flipper-network-plugin:${FLIPPER_VERSION}") {
+        exclude group:'com.squareup.okhttp3', module:'okhttp'
+    }
+    implementation "com.squareup.retrofit2:retrofit:2.9.0"
+    implementation "com.squareup.retrofit2:converter-gson:2.9.0"
+    debugImplementation("com.facebook.flipper:flipper-fresco-plugin:${FLIPPER_VERSION}")
     if (hermesEnabled.toBoolean()) {
         implementation("com.facebook.react:hermes-android")
     } else {

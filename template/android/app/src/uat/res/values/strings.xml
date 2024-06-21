@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">UAT-SampleApp</string>
+     <string moduleConfig="true" name="CodePushDeploymentKey">UatCodepushHashO</string>
+</resources>
