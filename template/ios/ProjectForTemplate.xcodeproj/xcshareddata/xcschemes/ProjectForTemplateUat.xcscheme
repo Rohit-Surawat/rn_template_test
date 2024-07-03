@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1210"
+   LastUpgradeVersion = "1540"
    version = "1.7">
    <BuildAction
       parallelizeBuildables = "YES"
-      buildImplicitDependencies = "YES">
+      buildImplicitDependencies = "YES"
+      buildArchitectures = "Automatic">
       <PreActions>
          <ExecutionAction
             ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
             <ActionContent
                title = "Run Script"
-               scriptText = "# Type a script or drag a script file from your workspace to insert its path.&#10;rm &quot;${CONFIGURATION_BUILD_DIR}/${INFOPLIST_PATH}&quot;&#10;echo &quot;.env.prod&quot; &gt; /tmp/envfile&#10;">
+               scriptText = "# Type a script or drag a script file from your workspace to insert its path.&#10;rm &quot;${CONFIGURATION_BUILD_DIR}/${INFOPLIST_PATH}&quot;&#10;echo &quot;.env.uat&quot; &gt; /tmp/envfile&#10;">
                <EnvironmentBuildable>
                   <BuildableReference
                      BuildableIdentifier = "primary"
-                     BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-                     BuildableName = "ProjectForTemplate.app"
-                     BlueprintName = "ProjectForTemplate"
+                     BlueprintIdentifier = "8F84E10C2C35DA1E009657C6"
+                     BuildableName = "ProjectForTemplateUat.app"
+                     BlueprintName = "ProjectForTemplateUat"
                      ReferencedContainer = "container:ProjectForTemplate.xcodeproj">
                   </BuildableReference>
                </EnvironmentBuildable>
@@ -30,9 +31,9 @@
                <EnvironmentBuildable>
                   <BuildableReference
                      BuildableIdentifier = "primary"
-                     BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-                     BuildableName = "ProjectForTemplate.app"
-                     BlueprintName = "ProjectForTemplate"
+                     BlueprintIdentifier = "8F84E10C2C35DA1E009657C6"
+                     BuildableName = "ProjectForTemplateUat.app"
+                     BlueprintName = "ProjectForTemplateUat"
                      ReferencedContainer = "container:ProjectForTemplate.xcodeproj">
                   </BuildableReference>
                </EnvironmentBuildable>
@@ -48,9 +49,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "ProjectForTemplate.app"
-               BlueprintName = "ProjectForTemplate"
+               BlueprintIdentifier = "8F84E10C2C35DA1E009657C6"
+               BuildableName = "ProjectForTemplateUat.app"
+               BlueprintName = "ProjectForTemplateUat"
                ReferencedContainer = "container:ProjectForTemplate.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -60,19 +61,8 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
-      <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "ProjectForTemplateTests.xctest"
-               BlueprintName = "ProjectForTemplateTests"
-               ReferencedContainer = "container:ProjectForTemplate.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-      </Testables>
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      shouldAutocreateTestPlan = "YES">
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -88,9 +78,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "ProjectForTemplate.app"
-            BlueprintName = "ProjectForTemplate"
+            BlueprintIdentifier = "8F84E10C2C35DA1E009657C6"
+            BuildableName = "ProjectForTemplateUat.app"
+            BlueprintName = "ProjectForTemplateUat"
             ReferencedContainer = "container:ProjectForTemplate.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -105,9 +95,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "ProjectForTemplate.app"
-            BlueprintName = "ProjectForTemplate"
+            BlueprintIdentifier = "8F84E10C2C35DA1E009657C6"
+            BuildableName = "ProjectForTemplateUat.app"
+            BlueprintName = "ProjectForTemplateUat"
             ReferencedContainer = "container:ProjectForTemplate.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

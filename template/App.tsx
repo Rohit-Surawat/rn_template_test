@@ -218,7 +218,7 @@ function App(): React.JSX.Element {
          Write Your Child Component Here
         */}
 
-                      <Text>Hi DHRE Template</Text>
+                      <Text>Hi DHRE Template {SERVICE_CONFIG.ENV}</Text>
                     </ScrollView>
                   </NavigationContainer>
                 </ErrorBoundary>
